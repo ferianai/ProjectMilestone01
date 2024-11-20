@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="o-mae, html, css">
+    <meta name="autor" content="ferianai">
+    <meta name=" description" content="o-mae home">
+    <title>O-mae Home</title>
+
+    <!-- //Applying custom font using embed : Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+
+     <!-- Font Awesome -->
+     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+     <link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+<body>
+
+    <header>
+        <nav class="navbar container-header">
+            <input type="checkbox" id="check">
+            <label for="check" class="labelbar">
+                <i class="fa-solid fa-bars" id="btn"></i>
+                <i class="fa-regular fa-circle-xmark" id="cancel"></i>
+            </label>
+            <a href="#"><i class="fa-solid fa-house"></i>O-mae Home</a>            
+            <ul class="navbar-link">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#service">Services</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="bg-banner">
+        <!-- banner start -->
+        <section class="banner" id="home">
+            <img src="img/banner.jpg" alt="home-living" class="banner-img">
+                <div class="banner-title container">
+                    <h1>Unique housing solutions for you</h1>
+                    <p>Whether you’re buying, listing, or renting, we can be of assistance to you.</p>
+                </div>
+        </section>
+        <!-- banner end -->
+
+        <!-- about start -->
+        <section claas="bg-white container" id="about">
+            <div class="content-about">
+                <img src="img/about-room.jpg" alt="living_room" class="about-img">
+                <div class="about-text">
+                    <h2>About O-mae Home</h2>
+                    <p>Founded in 2024, O-mae Homes is a full-service realty
+                    company, assisting homeowners from selection to
+                    financing, all the way to the purchase of their homes.
+                    All properties feature world-class standards and
+                    affordable property rates designed to fit every
+                    lifestyle.
+                     </p>
+                    <a href="#">Get In Touch</a>
+                </div>
+            </div>
+        </section>
+        <!-- about end -->
+
+        <!-- service start -->
+        <section class="container" id="service">
+            <h2>Services & Strategies</h2>
+            <ul class="content-service">
+                <li>
+                    <img src="img/services-01.jpg" alt="Residential Listings">
+                    <h3>Residential Listings</h3>
+                    <p>Over 150,000 available homes for every budget.</p>
+                </li>
+                <li>
+                    <img src="img/services-02.jpg" alt="Sales and Leasing">
+                    <h3>Sales and Leasing</h3>
+                    <p>One-on-one assistance from search to purchase.</p>
+                </li>
+                <li>
+                    <img src="img/services-01.jpg" alt="Property Management">
+                    <h3>Property Management</h3>
+                    <p>Consultancy for clients with multiple properties.</p>
+                </li>
+            </ul>
+        </section>
+        <!-- service end -->
+
+        <!-- <section>
+            <h2>Get the best property
+                investment options with
+                the help of our highly
+                experienced group of
+                real estate brokers.</h2>
+            <div>
+                <img src="img/services-04.jpg" alt="room">
+                <img src="img/services-05.jpg" alt="room">
+            </div>
+        </section> -->
+
+        <!-- contact start -->
+         <!-- <section class="contact" id="contact">
+            <div>
+                <img src="img/contact-01.jpg" alt="bedroom1">
+                <img src="img/contact-02.jpg" alt="bedroom2">
+                <img src="img/contact-03.jpg" alt="bedroom3">
+            </div>
+            <div>
+                <h2>Partner with us</h2>
+                <ul>
+                    <li>
+                        <h3>Mailing Address</h3>
+                        <p>123 Anywhere St., Surabaya, Indonesia 12345</p>
+                    </li>
+                    <li>
+                        <h3>Email Address</h3>
+                        <p>hello@omae.com</p>
+                    </li>
+                    <li>
+                        <h3>Phone Number</h3>
+                        <p>(0123) 456 7890</p>
+                    </li>
+                </ul>
+            </div>
+        
+         </section> -->
+        <!-- contact start -->
+
+    </main>
+    <footer></footer>
+
+    <!-- <script>
+        // Mendapatkan elemen navbar
+        const navbar = document.querySelector('.navbar');
+
+        // Fungsi untuk menangani perubahan navbar saat scroll
+        function handleScroll() {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled'); // Tambahkan kelas 'scrolled' jika scroll > 50px
+            } else {
+                navbar.classList.remove('scrolled'); // Hapus kelas jika scroll kembali ke atas
+            }
+        }
+
+        // Event listener untuk scroll
+        window.addEventListener('scroll', handleScroll);
+    </script> -->
+
+</body>
+</html>

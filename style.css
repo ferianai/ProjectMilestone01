@@ -1,0 +1,333 @@
+:root{
+    /* day mode */
+    --text: #15071d;
+    --background: #f7f3fc;
+    --primary: #ff990a;
+    --secondary: #ffb47a;
+    --accent: #f7eaa1;
+    --header-bg-color: #fff;
+
+    /* night mode 
+    --text: #f0e2f8;
+    --background: #07030c;
+    --primary: #f58f00;
+    --secondary: #853900;
+    --accent: #5e5108;
+    */
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: "DM Sans", sans-serif;
+}
+
+h1{
+    font-size: 80px;
+}
+h2{
+    font-size: 60px;
+}
+h3{
+    font-size: 40px;
+}
+p{
+    font-size: 20px;
+}
+.container{
+    margin: auto;
+    padding: 20px;
+}
+
+.container-header{
+    margin: auto;
+    padding: 20px;
+}
+.bg-white{
+    position: relative;
+}
+
+a{
+    color: inherit;
+}
+a:hover{
+    text-decoration: none;
+    color: var(--accent);
+}
+
+/* header & Navbar start */
+header{
+    background-color: var(--background);
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.navbar{    
+    display: flex;
+    position: relative;
+    font-size: 20px;
+    gap: 10px;
+    font-weight: bolder;
+    
+}
+
+.navbar a{
+    display: flex;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.navbar-link{
+    display: flex;
+    position: absolute;
+    right: 0;
+    gap: 20px;
+}
+
+.navbar-link li{
+    display: block;
+}
+
+.navbar-link li a{
+    position: relative;
+    padding: 5px 0;
+}
+
+
+.navbar-link li a:before{
+    position: absolute;
+    content: '';
+    left: 0;
+}
+
+label #btn,
+label #cancel{
+    display: none;
+    float: right;
+    line-height: 80px;
+    margin-right: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+
+/* header & Navbar end */
+
+/* banner start */
+.bg-banner{
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 10px;
+}
+
+.banner{
+    position: relative;
+    display: flex;
+    justify-content: top;
+    align-items: top;
+    height: 100%;
+    transform-style: preserve-3d;
+    z-index: -1;
+}
+
+.banner-img{
+    transform: translateZ(-10px) scale(2);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit:cover;
+    z-index: -1;
+}
+
+
+.banner-title{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.banner-title p{
+    font-size: 30px;
+}
+
+/* banner end */
+
+
+
+/* about start */
+#about{
+    background-color: var(--background);
+    padding: 60px 0;
+    height: 100%;
+    display: flex;
+}
+
+.content-about{
+    display: flex;
+    align-items: center;
+}
+
+#about img{
+    width: 50%;
+}
+.about-text{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px;
+
+}
+
+/* about end */
+
+/* service start */
+#service{
+    background-image: url(img/bg-client.png);
+    background-size: cover;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 0;
+}
+
+.content-service{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 60px;
+}
+
+.content-service li{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    padding: 20px;
+}
+
+/* service end */
+
+/* media start */
+@media (min-width: 1100px) {
+    .container{
+        width: 95%;
+    }
+    .container-header{
+        width: 95%;
+    }
+
+}
+
+@media (max-width: 1100px) {
+    .banner-title{
+        width: 100%;
+    }
+    h1{
+        font-size: 50px;
+    }
+    h2{
+        font-size: 40px;
+    }
+    h3{
+        font-size: 30px;
+    }
+    p{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 800px){
+    h1{
+        font-size: 40px;
+    }
+    h2{
+        font-size: 30px;
+    }
+    h3{
+        font-size: 20px;
+    }
+    p{
+        font-size: 18px;
+    }
+    label #btn{
+        display: block;
+        position: fixed;
+        right: 0;
+    }
+    .navbar-link{
+        margin: 10px;
+        position: fixed;
+        right: -300px;
+        width: 40%;
+        top: 60px;
+        background: var(--secondary);
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        align-items: flex-end;
+        border-radius: 10px;
+        padding: 20px;
+        transition: all .5s;
+    }
+    .navbar-link li{
+        display: absolute;
+        line-height: 30px;
+    }
+    #check:checked ~ .navbar-link{
+        right: 10px;
+    }
+    #check:checked ~ label #btn{
+        display: none;
+    }
+    #check:checked ~ label #cancel{
+        display: block;
+        position: fixed;
+        right: 0;
+    }
+    .navbar label{
+        margin-top: -5px;
+    }
+    .banner-title{
+        width: 100%;
+    }
+    .content-about{
+        flex-direction: column;
+        width: 100%;
+    }
+    #about img{
+        width: 100%;
+    }
+    .about-text{
+        width: 100%; 
+    }
+    #service{
+        height: fit-content;
+    }
+    .content-service{       
+        padding-top: 20px;
+        flex-direction: column;
+        width: 100%;
+    }
+    .content-service li{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+}
