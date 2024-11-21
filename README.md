@@ -1,3 +1,4 @@
+![home](documentation/home.png)
 # Company Profile Website - Home & Building Developer
 Welcome to our Company Profile website, designed for Home and Building development. This website serves as an introduction to our company, its services, and contact information.
 
