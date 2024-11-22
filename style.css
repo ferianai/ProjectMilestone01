@@ -33,20 +33,16 @@ h2{
     font-size: 60px;
 }
 h3{
-    font-size: 40px;
+    font-size: 28px;
 }
 p{
     font-size: 20px;
 }
 .container{
     margin: auto;
-    padding: 20px;
+    padding: 0 20px;
 }
 
-.container-header{
-    margin: auto;
-    padding: 20px;
-}
 .bg-white{
     position: relative;
 }
@@ -56,10 +52,17 @@ a{
 }
 a:hover{
     text-decoration: none;
-    color: var(--accent);
+    color: var(--primary);
 }
+/* logo */
+
 
 /* header & Navbar start */
+.container-header{
+    margin: auto;
+    padding: 20px 20px;
+}
+
 header{
     background-color: var(--background);
     position: fixed;
@@ -67,39 +70,54 @@ header{
     top: 0;
     right: 0;
     left: 0;
+    margin: auto;
 }
 
 .navbar{    
     display: flex;
-    position: relative;
+    align-items: center;
     font-size: 20px;
+    width: 100%;
+    position: relative;
+}
+.navbar-logo{
+    display: flex;
+    align-items: center;
     gap: 10px;
+}
+.navbar-btn{
+    position: absolute;
+    right: 0;
+    padding-right: 20px;
+}
+.logo{
+    scale: 100%;
+}
+.logo-text{
     font-weight: bolder;
-    
 }
 
 .navbar a{
     display: flex;
-    gap: 10px;
     text-decoration: none;
+    align-items: center
+
 }
 
 .navbar-link{
     display: flex;
-    position: absolute;
-    right: 0;
+    align-items: center;
     gap: 20px;
 }
 
 .navbar-link li{
-    display: block;
+    display:block;
 }
 
 .navbar-link li a{
     position: relative;
     padding: 5px 0;
 }
-
 
 .navbar-link li a:before{
     position: absolute;
@@ -113,21 +131,54 @@ label #cancel{
     float: right;
     line-height: 80px;
     margin-right: 20px;
-    margin-top: 10px;
+    margin-top: 18px;
     cursor: pointer;
     display: none;
+    font-size: 30px;
 }
 
 #check{
     display: none;
 }
 
+.contact-btn{
+    cursor: pointer;
+    position: relative;
+    padding: 10px 24px;
+    font-size: 18px;
+    color: var(--text);
+    border: 1px solid var(--text);
+    border-radius: 34px;
+    background-color: transparent;
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.contact-btn:hover{
+    scale: 1.1;
+    box-shadow: 0 0 10px var(--accent);
+}
 
+.contact-btn1{
+    cursor: pointer;
+    position: relative;
+    padding: 10px 10px;
+    font-size: 18px;
+    color: var(--text);
+    border: 1px solid var(--text);
+    border-radius: 34px;
+    background-color: transparent;
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    display: none;
+}
+.contact-btn1:hover{
+    scale: 1.1;
+    box-shadow: 0 0 10px var(--accent);
+}
 /* header & Navbar end */
 
 /* banner start */
 .bg-banner{
     height: 100vh;
+    width: 100%;
     overflow-y: auto;
     overflow-x: hidden;
     perspective: 10px;
@@ -172,7 +223,9 @@ label #cancel{
     background-color: var(--background);
     padding: 60px 0;
     height: 100%;
+    width: 100%;
     display: flex;
+    padding-right: 50px;
 }
 
 .content-about{
@@ -181,22 +234,56 @@ label #cancel{
 }
 
 #about img{
-    width: 50%;
+    width: 100%;
 }
 .about-text{
-    width: 50%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 60px;
+    padding: 20px;
+    gap: 20px;
 
+}
+
+.get-in-touch button{
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 0;
+    background-color: var(--secondary);
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    font-size: 15px;
+    transition: all 0.5s ease;
+}
+.get-in-touch button a{
+    text-decoration: none;
+    font-size: medium;
+    color: var(--text);
+}
+  
+.get-in-touch button:hover {
+    letter-spacing: 3px;
+    background-color: var(--primary);
+    color: var(--text);
+    box-shadow: var(--primary) 0px 7px 29px 0px;
+}
+  
+.get-in-touch button:active {
+    letter-spacing: 3px;
+    background-color: var(--primary);
+    color: var(--text);
+    box-shadow: var(--primary 0px 0px 0px 0px);
+    transform: translateY(10px);
+    transition: 100ms;
 }
 
 /* about end */
 
 /* service start */
 #service{
-    background-image: url(img/bg-client.png);
+    background-color: var(--background);
     background-size: cover;
     position: relative;
     height: 100%;
@@ -204,35 +291,316 @@ label #cancel{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 80px 0;
+    padding-top: 90px;
 }
-
-.content-service{
-    display: flex;
-    justify-content: center;
+.container-service{
     width: 100%;
-    padding-top: 60px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding-top: 20px;
 }
 
-.content-service li{
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-    padding: 20px;
-}
+.card-service {
+    width: 100%;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    border: 1px solid transparent;
+  }
+  
+  .card-service a {
+    text-decoration: none
+  }
+  
+  .content-service {
+    padding: 1.1rem;
+  }
+  
+  .image-service {
+    object-fit: cover;
+    width: 100%;
+    height: 300px;
+    background-image: url(img/services-01.jpg);
+    background-size: cover;
+  }
+
+  .image-service2 {
+    object-fit: cover;
+    width: 100%;
+    height: 300px;
+    background-image: url(img/services-02.jpg);
+    background-size: cover;
+  }
+  
+  .image-service3 {
+    object-fit: cover;
+    width: 100%;
+    height: 300px;
+    background-image: url(img/services-03.jpg);
+    background-size: cover;
+  }
+  
+  
+  .title-service {
+    color: #111827;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+  }
+  
+  .desc-service {
+    margin-top: 0.5rem;
+    color: #6B7280;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
 
 /* service end */
 
-/* media start */
-@media (min-width: 1100px) {
-    .container{
-        width: 95%;
-    }
-    .container-header{
-        width: 95%;
-    }
+/* contact start */
+#contact{
+    background-color: var(--background);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-top: 90px;
+}
+.card-contact {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+  
+.title-contact {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+}
+  
+.form-contact {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+  
+.group-contact {
+    position: relative;
+}
+  
+.form-contact .group-contact label {
+    font-size: 14px;
+    color: rgb(99, 102, 102);
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    background-color: #fff;
+    transition: all .3s ease;
+}
+  
+.form-contact .group-contact input,
+.form-contact .group-contact textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    outline: 0;
+    width: 100%;
+    background-color: transparent;
+}
+  
+.form-contact .group-contact input:placeholder-shown+ label, .form-contact .group-contact textarea:placeholder-shown +label {
+    top: 10px;
+    background-color: transparent;
+}
+  
+.form-contact .group-contact input:focus,
+.form-contact .group-contact textarea:focus {
+    border-color: var(--primary);
+}
+  
+.form-contact .group-contact input:focus+ label, .form-contact .group-contact textarea:focus +label {
+    top: -10px;
+    left: 10px;
+    background-color: #fff;
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 14px;
+}
+  
+.form-contact .group-contact textarea {
+    resize: none;
+    height: 100px;
+}
+  
+.form-contact button {
+    background-color: var(--secondary);
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+  
+.form-contact button:hover {
+    background-color: var(--primary);
+    color: #fff;
+}
+
+.card-contact-info{
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-list{
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.contact-info{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.textinput{
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    gap: 10px;
+}
+
+.textinput input, .textinput textarea{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.btnsubmit{
+    border-color: black;
+    border-radius: 10px;  
+    padding: 10px;
+    width: 10rem;
+    display: inline-block;
+    color: var(--white);
+    font-weight: bolder;
+    border: 1px solid var(--primary);
+    cursor:pointer;
+}
+.btnsubmit:hover{
+    background: var(--greenlight);
+}
+
+.mapouter{
+    position:relative;
+    text-align:right;
+    width:100%;
+    height:200px;
 
 }
+.gmap_canvas {
+    overflow:hidden;
+    background:none!important;
+    width:100%;
+    height:200px;
+}
+.gmap_iframe {
+    width:100%!important;
+    height:200px!important;
+}
+
+/* contact end */
+
+/* logo contact parner move */
+/* Setting the appearance of the logo container */
+.logo-container-move {
+    display: flex;
+    overflow: hidden;
+    width: fit-content;
+    justify-content: center;
+}
+
+/* Setting the appearance and animation of the logo */
+.logo-partner-move {
+    width: 100%;  /* Adjust the size of the logo */
+    height: 60px;
+    margin-right: 50px;  /* Jarak antar logo */
+    animation: moveLogo 2s linear infinite;  /* Animasi bergerak */
+}
+
+/* Animasi untuk membuat logo bergerak */
+@keyframes moveLogo {
+    0% {
+        transform: translateX(100%); /* Logo dimulai di luar layar (kanan) */
+    }
+    100% {
+        transform: translateX(-100%); /* Logo berakhir di luar layar (kiri) */
+    }
+}
+
+/* footer start */
+footer{
+    background-color: black;
+    color: #fff;
+    margin: auto;
+    padding: 20px 0;
+}
+.container-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+.container-footer p{
+    font-size: 18px;
+    text-align: center;
+}
+.social-media{
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+}
+.social-link{
+    text-decoration: none;
+}
+.footer-term{
+    display: flex;
+    gap: 20px;
+}
+
+/* footer end */
+
+/* media start */
+/* @media (min-width: 1100px) {
+    .container{
+        width: 90%;
+    }
+    .container-header{
+        width: 90%;
+    }
+
+} */
 
 @media (max-width: 1100px) {
     .banner-title{
@@ -268,9 +636,10 @@ label #cancel{
     label #btn{
         display: block;
         position: fixed;
-        right: 0;
+        right: 10px;
+        top: 16px;
     }
-    .navbar-link{
+    .navbar-logo .navbar-link{
         margin: 10px;
         position: fixed;
         right: -300px;
@@ -280,16 +649,16 @@ label #cancel{
         display: flex;
         gap: 20px;
         flex-direction: column;
-        align-items: flex-end;
+        align-items: center;
         border-radius: 10px;
         padding: 20px;
         transition: all .5s;
     }
-    .navbar-link li{
+    .navbar-logo .navbar-link li{
         display: absolute;
         line-height: 30px;
     }
-    #check:checked ~ .navbar-link{
+    #check:checked ~ .navbar-logo .navbar-link {
         right: 10px;
     }
     #check:checked ~ label #btn{
@@ -298,7 +667,12 @@ label #cancel{
     #check:checked ~ label #cancel{
         display: block;
         position: fixed;
-        right: 0;
+        right: 10px;
+        top: 16px;
+        font-size: larger;
+    }
+    .contact-btn1{
+        display: block;
     }
     .navbar label{
         margin-top: -5px;
@@ -319,15 +693,39 @@ label #cancel{
     #service{
         height: fit-content;
     }
-    .content-service{       
-        padding-top: 20px;
-        flex-direction: column;
-        width: 100%;
+    .navbar-btn{
+        display: none
     }
-    .content-service li{
-        display: flex;
+    .container-service{
         flex-direction: column;
+    }
+    .contact-list{
+        flex-direction: column;
+    }
+    .container-footer{
+        flex-direction: column;
+    }
+    #contact{
+        height: fit-content;
+    }
+    .logo-container-move {
+        display: flex;
+        overflow: visible;
         width: 100%;
+        justify-content: center;
+        padding-bottom: 10px;
+    }
+    /* Setting the appearance and animation of the logo */
+    .logo-partner-move {
+        width: 100%;  /* Adjust the size of the logo */
+        height: 30px;
+        margin-right: 10px;  /* Jarak antar logo */
+        animation: moveLogo 2s linear infinite;  /* Animasi bergerak */
+    }
+    .logo-partneer01,
+    .logo-partneer02,
+    .logo-partneer03 {
+        display: none;
     }
 
 }
