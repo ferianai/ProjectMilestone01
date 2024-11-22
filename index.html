@@ -18,7 +18,6 @@
      <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 <body>
-
     <header>
         <nav class="navbar container-header">
             <input type="checkbox" id="check">
@@ -26,14 +25,19 @@
                 <i class="fa-solid fa-bars" id="btn"></i>
                 <i class="fa-regular fa-circle-xmark" id="cancel"></i>
             </label>
-            <a href="#"><i class="fa-solid fa-house"></i>O-mae Home</a>            
-            <ul class="navbar-link">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#service">Services</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <div class="navbar-logo">
+                <a href="#" class="logo-link"><img src="img/logo-crop.png" alt="logo" class="logo">
+                <p class="logo-text">Home & Building</p></a> 
+                <ul class="navbar-link">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#service">Services</a></li>
+                    <li><a href="#contact"><button class="contact-btn1">Contact Us</button></a></li>
+                </ul>
+            </div>                        
+            <div class="navbar-btn">
+                <a href="#contact"><button class="contact-btn">Contact Us</button></a>
+            </div>
         </nav>
     </header>
 
@@ -41,17 +45,19 @@
         <!-- banner start -->
         <section class="banner" id="home">
             <img src="img/banner.jpg" alt="home-living" class="banner-img">
-                <div class="banner-title container">
-                    <h1>Unique housing solutions for you</h1>
-                    <p>Whether you’re buying, listing, or renting, we can be of assistance to you.</p>
-                </div>
+            <div class="banner-title container">
+                <h1>Unique housing solutions for you</h1>
+                <p>Whether you’re buying, listing, or renting, we can be of assistance to you.</p>
+            </div>
         </section>
         <!-- banner end -->
 
         <!-- about start -->
         <section claas="bg-white container" id="about">
             <div class="content-about">
-                <img src="img/about-room.jpg" alt="living_room" class="about-img">
+                <div>
+                    <img src="img/about-room.jpg" alt="living_room" class="about-img">
+                </div>
                 <div class="about-text">
                     <h2>About O-mae Home</h2>
                     <p>Founded in 2024, O-mae Homes is a full-service realty
@@ -60,8 +66,10 @@
                     All properties feature world-class standards and
                     affordable property rates designed to fit every
                     lifestyle.
-                     </p>
-                    <a href="#">Get In Touch</a>
+                    </p>
+                    <div class="get-in-touch">
+                        <button><a class="text-white" href="mailto:saveeee@gmail.com">Get In Touch</a></button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -69,86 +77,134 @@
 
         <!-- service start -->
         <section class="container" id="service">
-            <h2>Services & Strategies</h2>
-            <ul class="content-service">
-                <li>
-                    <img src="img/services-01.jpg" alt="Residential Listings">
-                    <h3>Residential Listings</h3>
-                    <p>Over 150,000 available homes for every budget.</p>
-                </li>
-                <li>
-                    <img src="img/services-02.jpg" alt="Sales and Leasing">
-                    <h3>Sales and Leasing</h3>
-                    <p>One-on-one assistance from search to purchase.</p>
-                </li>
-                <li>
-                    <img src="img/services-01.jpg" alt="Property Management">
-                    <h3>Property Management</h3>
-                    <p>Consultancy for clients with multiple properties.</p>
-                </li>
-            </ul>
+            <h2>Services & Products</h2>
+            <div class="container-service">
+                <div class="card-service">
+                    <div class="image-service">
+                    </div>
+                     <div class="content-service">
+                       <a href="#">
+                         <span class="title-service">
+                            Residential Listings.
+                         </span>
+                       </a>
+                       <p class="desc-service">
+                            Over 150,000 available homes for every budget. 
+                       </p>
+                     </div>
+                </div>
+                <div class="card-service">
+                    <div class="image-service2">
+                    </div>
+                     <div class="content-service">
+                       <a href="#">
+                         <span class="title-service">
+                            Renovations and remodeling.
+                         </span>
+                       </a>
+                       <p class="desc-service">
+                            One-on-one assistance from search to purchase. 
+                       </p>
+                     </div>
+                </div>
+                <div class="card-service">
+                    <div class="image-service3">
+                    </div>
+                     <div class="content-service">
+                       <a href="#">
+                         <span class="title-service">
+                            Architecture & design consulting
+                         </span>
+                       </a>
+                       <p class="desc-service">
+                            Consultancy for clients with multiple properties. 
+                       </p>
+                     </div>
+                </div>
+            </div>
+            
         </section>
         <!-- service end -->
 
-        <!-- <section>
-            <h2>Get the best property
-                investment options with
-                the help of our highly
-                experienced group of
-                real estate brokers.</h2>
-            <div>
-                <img src="img/services-04.jpg" alt="room">
-                <img src="img/services-05.jpg" alt="room">
-            </div>
-        </section> -->
-
         <!-- contact start -->
-         <!-- <section class="contact" id="contact">
-            <div>
-                <img src="img/contact-01.jpg" alt="bedroom1">
-                <img src="img/contact-02.jpg" alt="bedroom2">
-                <img src="img/contact-03.jpg" alt="bedroom3">
-            </div>
+        <section class="bg-white container" id="contact">
             <div>
                 <h2>Partner with us</h2>
-                <ul>
-                    <li>
-                        <h3>Mailing Address</h3>
-                        <p>123 Anywhere St., Surabaya, Indonesia 12345</p>
-                    </li>
-                    <li>
-                        <h3>Email Address</h3>
-                        <p>hello@omae.com</p>
-                    </li>
-                    <li>
-                        <h3>Phone Number</h3>
-                        <p>(0123) 456 7890</p>
-                    </li>
-                </ul>
+                <div class="contact-list ">
+                    <div class="card-contact">
+                        <span class="title-contact">Leave a Message</span>
+                        <form class="form-contact">
+                            <div class="group-contact">
+                                <input placeholder="" type="text" required="">
+                                <label for="name">Name</label>
+                            </div>
+                            <div class="group-contact">
+                                <input placeholder="" type="email" id="email" name="email" required="">
+                                <label for="email">Email</label>
+                            </div>
+                            <div class="group-contact">
+                                <textarea placeholder="" id="comment" name="comment" rows="5" required=""></textarea>
+                                <label for="comment">Comment</label>
+                            </div>
+                            <button type="submit">Send Message</button>
+                        </form>
+                    </div>
+                    <div class="card-contact-info">
+                        <div class="contact-info">
+                            <div>
+                                <span class="title-contact">Mailing Address</span>
+                                <p>123 Anywhere St., Surabaya, Indonesia 12345</p>
+                            </div>
+                            <div>
+                                <span class="title-contact">Email Address</span>
+                                <p>hello@omae.com</p>
+                            </div>
+                            <div>
+                                <span class="title-contact">Phone Number</span>
+                                <p>(0123) 456 7890</p>
+                            </div>
+                        </div>
+                        <div class="mapouter">
+                            <div class="gmap_canvas">
+                                <iframe class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Surabaya&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        
-         </section> -->
+            <div>
+                <h2>Our Partners</h2>
+                <div class="logo-container-move">
+                    <img class="logo-partner-move logo-partneer01" src="img/logo/logo1.png" alt="Logo 1">
+                    <img class="logo-partner-move logo-partneer02" src="img/logo/logo2.png" alt="Logo 2">
+                    <img class="logo-partner-move logo-partneer03" src="img/logo/logo3.png" alt="Logo 3">
+                    <img class="logo-partner-move logo-partneer04" src="img/logo/logo4.png" alt="Logo 4">
+                    <img class="logo-partner-move logo-partneer05" src="img/logo/logo5.png" alt="Logo 5">
+                    <!-- <img class="logo-partner-move logo-partneer06" src="img/logo/logo6.png" alt="Logo 6"> -->
+                    <img class="logo-partner-move logo-partneer07" src="img/logo/logo7.png" alt="Logo 7">
+                    <img class="logo-partner-move logo-partneer08" src="img/logo/logo8.png" alt="Logo 8">
+                    <img class="logo-partner-move logo-partneer09" src="img/logo/logo9.png" alt="Logo 9">
+                    <img class="logo-partner-move logo-partneer10" src="img/logo/logo10.png" alt="Logo 10">
+
+                </div>
+            </div>
+        </section>
         <!-- contact start -->
 
+        <footer>
+            <div class="container container-footer">
+                <p> Copyright &copy; omae.site Website Designed by <a href="https://omae.site/">ferianai</a> 2024</p>
+                <div class="footer-term">
+                    <a class="social-link" href="#">Legal terms</a>
+                    <a class="social-link" href="#">Privacy policy</a>
+                </div>
+                <div class="social-media">
+                    <a class="social-link" href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a class="social-link" href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a class="social-link" href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </footer> 
     </main>
-    <footer></footer>
-
-    <!-- <script>
-        // Mendapatkan elemen navbar
-        const navbar = document.querySelector('.navbar');
-
-        // Fungsi untuk menangani perubahan navbar saat scroll
-        function handleScroll() {
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled'); // Tambahkan kelas 'scrolled' jika scroll > 50px
-            } else {
-                navbar.classList.remove('scrolled'); // Hapus kelas jika scroll kembali ke atas
-            }
-        }
-
-        // Event listener untuk scroll
-        window.addEventListener('scroll', handleScroll);
-    </script> -->
-
 </body>
 </html>
