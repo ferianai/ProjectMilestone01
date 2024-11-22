@@ -290,7 +290,6 @@ label #cancel{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top: 90px;
 }
 .container-service{
     width: 100%;
@@ -533,31 +532,46 @@ label #cancel{
 /* contact end */
 
 /* logo contact parner move */
-/* Setting the appearance of the logo container */
+
+/* Container that holds the logos */
+.logo-wrapper {
+    width: 100%; 
+    overflow: hidden; 
+    display: flex;
+    padding-top: 20px;
+}
+
+/* The wrapper that moves the logos */
 .logo-container-move {
     display: flex;
-    overflow: hidden;
-    width: fit-content;
-    justify-content: center;
+    animation: moveLogo 25s linear infinite;
 }
 
 /* Setting the appearance and animation of the logo */
 .logo-partner-move {
-    width: 100%;  /* Adjust the size of the logo */
+    width: 100%;  
     height: 60px;
-    margin-right: 50px;  /* Jarak antar logo */
-    animation: moveLogo 2s linear infinite;  /* Animasi bergerak */
+    margin-right: 20px;  
 }
 
 /* Animasi untuk membuat logo bergerak */
 @keyframes moveLogo {
     0% {
-        transform: translateX(100%); /* Logo dimulai di luar layar (kanan) */
+      transform: translateX(0%);
     }
+    25% {
+      transform: translateX(-100%);
+    }
+    50% {
+      transform: translateX(0%);
+    }
+    75% {
+      transform: translateX(-100%);
+    }   
     100% {
-        transform: translateX(-100%); /* Logo berakhir di luar layar (kiri) */
+        transform: translateX(0%);
     }
-}
+  }
 
 /* footer start */
 footer{
