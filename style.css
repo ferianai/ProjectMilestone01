@@ -27,10 +27,10 @@ body{
 }
 
 h1{
-    font-size: 80px;
+    font-size: 60px;
 }
 h2{
-    font-size: 60px;
+    font-size: 40px;
 }
 h3{
     font-size: 28px;
@@ -225,7 +225,6 @@ label #cancel{
     height: 100%;
     width: 100%;
     display: flex;
-    padding-right: 50px;
 }
 
 .content-about{
